@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E7a-fi-eG9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Yapılacak İşler-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AnaSayfaVC" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-Tj-bYh">
+                                <rect key="frame" x="0.0" y="148" width="414" height="51"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" systemColor="opaqueSeparatorColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B0m-Lx-Fqm">
+                                <rect key="frame" x="0.0" y="199" width="414" height="663"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="islerHucre" id="3UA-Ww-G8B" customClass="TableViewHucre" customModule="toDoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3UA-Ww-G8B" id="COg-2T-4w1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcw-Vh-eJM">
+                                                    <rect key="frame" x="86" y="39" width="240" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Color3"/>
+                                        <connections>
+                                            <outlet property="isBilgiLabel" destination="Rcw-Vh-eJM" id="jzp-Zl-NTG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="KtW-Tj-bYh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GIP-mt-6kz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B0m-Lx-Fqm" secondAttribute="trailing" id="X3Y-2a-djc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B0m-Lx-Fqm" secondAttribute="bottom" id="X9p-Jy-NQT"/>
+                            <constraint firstItem="B0m-Lx-Fqm" firstAttribute="top" secondItem="KtW-Tj-bYh" secondAttribute="bottom" id="gTe-Bv-YQ9"/>
+                            <constraint firstItem="KtW-Tj-bYh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kn3-O6-c4l"/>
+                            <constraint firstItem="KtW-Tj-bYh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l0V-Th-1dD"/>
+                            <constraint firstItem="B0m-Lx-Fqm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qpM-O0-ID8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yapılacak İşler" id="QMP-Ks-y7O">
+                        <barButtonItem key="rightBarButtonItem" image="add_circle-add_circle_symbol" style="plain" id="fpF-Uv-bzS">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="po1-Hg-GQD" kind="show" id="EyM-qd-uVg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="islerTableView" destination="B0m-Lx-Fqm" id="x4j-Fl-oeI"/>
+                        <outlet property="searchBar" destination="KtW-Tj-bYh" id="Wgj-ui-8FA"/>
+                        <segue destination="bhQ-Vj-PTd" kind="show" identifier="toDetay" id="Jv5-iB-pYK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="97.767857142857139"/>
+        </scene>
+        <!--Yapılacak İşlerin Detayı-->
+        <scene sceneID="UrS-b6-WYz">
+            <objects>
+                <viewController id="bhQ-Vj-PTd" customClass="IsDetayVC" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MnD-jC-162">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İş Ad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Gh-Do-jyb">
+                                <rect key="frame" x="50" y="198" width="314" height="45.5"/>
+                                <color key="backgroundColor" name="Color3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDm-8S-K85">
+                                <rect key="frame" x="136" y="293.5" width="142.5" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Güncelle">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGuncelle:" destination="bhQ-Vj-PTd" eventType="touchUpInside" id="qid-3b-pFD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PWr-ab-Fnn"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="PWr-ab-Fnn" firstAttribute="trailing" secondItem="4Gh-Do-jyb" secondAttribute="trailing" constant="50" id="0rZ-Ha-9Qz"/>
+                            <constraint firstItem="4Gh-Do-jyb" firstAttribute="leading" secondItem="PWr-ab-Fnn" secondAttribute="leading" constant="50" id="463-na-Fyw"/>
+                            <constraint firstItem="vDm-8S-K85" firstAttribute="top" secondItem="4Gh-Do-jyb" secondAttribute="bottom" constant="50" id="8U8-Px-GB6"/>
+                            <constraint firstItem="4Gh-Do-jyb" firstAttribute="top" secondItem="PWr-ab-Fnn" secondAttribute="top" constant="50" id="A7N-KM-O3d"/>
+                            <constraint firstItem="vDm-8S-K85" firstAttribute="centerX" secondItem="MnD-jC-162" secondAttribute="centerX" id="YtH-nI-7NU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yapılacak İşlerin Detayı" id="7aw-Rn-eju"/>
+                    <connections>
+                        <outlet property="tfIsAd" destination="4Gh-Do-jyb" id="tX9-Pl-xNg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vC-bt-6n2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="527"/>
+        </scene>
+        <!--Yapılacak İşlerin Kaydı-->
+        <scene sceneID="jl1-wW-ebU">
+            <objects>
+                <viewController id="po1-Hg-GQD" customClass="IsKayitVC" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="po7-Kg-J3r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İş Ad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZfH-Mi-MCb">
+                                <rect key="frame" x="50" y="198" width="314" height="45.5"/>
+                                <color key="backgroundColor" name="Color3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8P-Jw-78M">
+                                <rect key="frame" x="166" y="293.5" width="82.5" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ekle">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonKaydet:" destination="po1-Hg-GQD" eventType="touchUpInside" id="Q9G-ha-jdc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FdL-k1-qJO"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="X8P-Jw-78M" firstAttribute="centerX" secondItem="po7-Kg-J3r" secondAttribute="centerX" id="FwF-hJ-Qg8"/>
+                            <constraint firstItem="FdL-k1-qJO" firstAttribute="trailing" secondItem="ZfH-Mi-MCb" secondAttribute="trailing" constant="50" id="Uai-nO-Kos"/>
+                            <constraint firstItem="ZfH-Mi-MCb" firstAttribute="top" secondItem="FdL-k1-qJO" secondAttribute="top" constant="50" id="gud-Az-MKf"/>
+                            <constraint firstItem="ZfH-Mi-MCb" firstAttribute="leading" secondItem="FdL-k1-qJO" secondAttribute="leading" constant="50" id="hWL-xr-hce"/>
+                            <constraint firstItem="X8P-Jw-78M" firstAttribute="top" secondItem="ZfH-Mi-MCb" secondAttribute="bottom" constant="50" id="rFZ-KN-cJG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yapılacak İşlerin Kaydı" id="qW2-VQ-Kry"/>
+                    <connections>
+                        <outlet property="tfIsAd" destination="ZfH-Mi-MCb" id="j2a-iZ-W6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7f-Pj-vNk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="-148"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DeY-WG-gvU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E7a-fi-eG9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ce0-KT-BOk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1ni-yN-vGR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeN-1d-Zc4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_circle-add_circle_symbol" width="13" height="13"/>
+        <namedColor name="Color3">
+            <color red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
